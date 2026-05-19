@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>个人主页</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      line-height: 1.8;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.9);
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #cbd5e1;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #67e8f9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航栏 -->
+  <header>
+    <nav>
+      <div class="logo">My Homepage</div>
+
+      <div class="menu">
+        <a href="#about">自我介绍</a>
+        <a href="#hobby">兴趣爱好</a>
+        <a href="#study">学习计划</a>
+        <a href="#future">未来目标</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 首页 -->
+  <section class="hero">
+    <h1>欢迎来到我的个人主页</h1>
+    <p>
+      记录学习、成长与未来目标的个人网站
+    </p>
+  </section>
+
+  <!-- 自我介绍 -->
+  <section id="about">
+    <h2 class="section-title">自我介绍</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>个人信息</h3>
+        <p>
+          大家好，我是一名正在学习计算机与人工智能相关知识的学生。
+          我对网页设计、编程开发以及网络技术非常感兴趣。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>性格特点</h3>
+        <p>
+          我喜欢探索新技术，具有较强的学习能力与团队合作精神，
+          希望未来能够成为优秀的软件开发者。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 兴趣爱好 -->
+  <section id="hobby">
+    <h2 class="section-title">兴趣爱好</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>编程开发</h3>
+        <p>
+          喜欢学习 HTML、CSS、JavaScript、Python 等编程语言，
+          并尝试制作网页与小型项目。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>人工智能</h3>
+        <p>
+          对 AI 技术、智能系统以及机器学习方向有浓厚兴趣，
+          希望未来能够参与相关研究。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>音乐与电影</h3>
+        <p>
+          平时喜欢听音乐、观看电影，通过娱乐放松心情并获得灵感。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学习计划 -->
+  <section id="study">
+    <h2 class="section-title">学习计划</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>前端开发</h3>
+        <p>
+          深入学习 HTML、CSS 与 JavaScript，
+          提升网页设计与交互能力。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>后端开发</h3>
+        <p>
+          学习数据库、服务器以及 API 开发，
+          了解完整的网站开发流程。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>英语与韩语</h3>
+        <p>
+          提升语言能力，为未来国际化学习与工作做准备。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 未来目标 -->
+  <section id="future">
+    <h2 class="section-title">未来目标</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>技术成长</h3>
+        <p>
+          希望未来能够掌握更多先进技术，
+          独立开发完整的软件与网站项目。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>职业目标</h3>
+        <p>
+          成为一名优秀的软件工程师，
+          从事人工智能与互联网相关工作。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>持续学习</h3>
+        <p>
+          保持学习热情，不断挑战自己，
+          提升专业能力与实践经验。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    © 2026 我的个人主页 | Personal Homepage
+  </footer>
+
+</body>
+</html>
